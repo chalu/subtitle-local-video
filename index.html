@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Play Local Video</title>
+
+    <style>
+
+      input[type=file] {
+        padding: 1em;
+        background: #ccc;
+        border: 1px solid #808080;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        margin: 1em auto;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <input type="file" accept=".mp4, .srt, .vtt" multiple>
+
+    <video controls>
+        <source />
+        <track label="English" kind="subtitles" srclang="en" default>
+    </video>
+
+    <script type="module" src="srt-webvtt.js"></script>
+    <script type="module" src="index.js"></script>
+
+  </body>
+</html>
